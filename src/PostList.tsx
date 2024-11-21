@@ -29,6 +29,7 @@ export function PostList() {
         <div>
           {posts.map((post) => (
             <Post
+              key = {post.id}
               title={post.title}
               description={post.description}
               img={post.image}
