@@ -1,0 +1,41 @@
+body {
+    background-color: #5cdb95;
+}
+
+.main-div {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    background-color: #05386b;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid black;
+    gap: 10px;
+    color: #edf5e1;
+}
+  
+.center-h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.center-p {
+    font-size: 16px;
+    margin: 0; 
+}
+  
+.center-img {
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
+}
+  
