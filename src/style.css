@@ -18,8 +18,8 @@ body {
     text-align: center;
     line-height: 50px;
     border: 1px solid black;
-    gap: 10px;
     color: #edf5e1;
+    margin-bottom: 20px;
 }
   
 .center-h1 {
@@ -38,4 +38,13 @@ body {
     height: auto;
     margin: 10px 0;
 }
-  
+
+.like {
+    max-width: 30;
+    max-height: 30;
+}
+
+.dislike {
+    max-width: 30;
+    max-height: 30;
+}
