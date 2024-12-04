@@ -1,29 +1,25 @@
-body {
-    background-color: #5cdb95;
-}
-
 .main-div {
-    position: relative;
-    height: 790;
-    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    width: 300px;
+    padding: 100px;
 }
 
 .div {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    flex-direction: column;
+    width: 243px;
     background-color: #05386b;
-    text-align: center;
-    line-height: 50px;
     border: 1px solid black;
     color: #edf5e1;
-    margin-bottom: 20px;
 }
   
 .center-h1 {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     margin: 0;
 }
@@ -34,8 +30,8 @@ body {
 }
   
 .center-img {
-    max-width: 300px;
-    height: auto;
+    width: 233px;
+    height: 153px;
     margin: 10px 0;
 }
 
@@ -47,4 +43,7 @@ body {
 .dislike {
     max-width: 30;
     max-height: 30;
+}
+.result {
+    display: flex;
 }
