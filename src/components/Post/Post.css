@@ -1,9 +1,8 @@
 .main-div {
     display: flex;
     justify-content: space-around;
-    height: auto;
+    height: 320px;
     width: 300px;
-    padding: 100px;
 }
 
 .div {
@@ -11,6 +10,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    margin: 10px;
     flex-direction: column;
     width: 243px;
     background-color: #05386b;
