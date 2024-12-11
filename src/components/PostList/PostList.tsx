@@ -60,6 +60,15 @@ export function PostList() {
         }
     }, [selectedCategory])
 
+    useEffect(()=>{
+      async function getPosts(){
+          // const response = await fetch('https://dummyjson.com/posts')
+          const response = await fetch('https://fakestoreapi.com/products')
+          const posts = await response.json()
+          setFilteredPosts(posts)
+      }
+      getPosts()
+  },[])
 
     return (
       <>
@@ -79,9 +88,10 @@ export function PostList() {
           </select>
           </div>
     
-        {/* <div className="postList"> */}
+        <div className="posts">
           {filteredPosts.map((post) => (
             <Post
+              id={post.id}
               key={post.id}
               title={post.title}
               description={post.description}
@@ -91,6 +101,7 @@ export function PostList() {
               dislike={post.imgDislike}
             />
           ))}
+        </div>
         </div>
       </>
     );
