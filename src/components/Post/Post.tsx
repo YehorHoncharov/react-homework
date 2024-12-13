@@ -54,7 +54,6 @@ export function Post(props: IPostProps) {
         <h1>{props.description.slice(0,25)}...</h1>
         {/* <p className="center-p">{props.description}</p> */}
         <p className="center-p">-{props.author}</p>
-        </div>
         <div className="result">
           <p><img className="like" src={props.like} alt="" />{like}</p>
           <p ><img className="dislike" src={props.dislike} alt="" />{dislike}</p>
@@ -62,6 +61,7 @@ export function Post(props: IPostProps) {
         <div className="reaction">
           <button disabled={isLiked} onClick={incrementLike}><img className="like" src={props.like} alt="" /></button>
           <button disabled={isDisliked} onClick={incrementDislike}><img className="dislike" src={props.dislike} alt="" /></button>
+        </div>
         </div>
         </Link>
       // </div>

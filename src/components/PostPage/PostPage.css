@@ -1,15 +1,46 @@
-.postpageid {
-    display: flex;
-    align-items: center; 
-    
+.postpage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
-.postpageid p {
-   font-size: 100px; 
-   font-family: Roboto, Arial, sans-serif;
-   font-size: 10vmax;
-   background-color: #a2a2a2;
-   background-image: linear-gradient(90deg, #d70f0f, #2AA5A0);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+.postpage h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
 }
+
+.postpage img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.postpage p {
+    margin: 10px 0;
+    font-size: 19px;
+    color: #555;
+}
+
+.postpage strong {
+    font-weight: bold;
+    color: #111;
+}
+
+
+.postpage article a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.postpage article a:hover {
+    text-decoration: underline;
+}
+
