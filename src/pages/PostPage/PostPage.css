@@ -3,13 +3,15 @@
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .postpage h1 {
-    font-size: 40px;
+    font-size: 2.5em;
     margin-bottom: 20px;
     color: #222;
     text-align: center;
@@ -25,7 +27,7 @@
 
 .postpage p {
     margin: 10px 0;
-    font-size: 19px;
+    font-size: 1.2em;
     color: #555;
 }
 
@@ -34,6 +36,16 @@
     color: #111;
 }
 
+.postpage article {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 1.1em;
+    color: #444;
+}
 
 .postpage article a {
     color: #3498db;
@@ -43,4 +55,3 @@
 .postpage article a:hover {
     text-decoration: underline;
 }
-
