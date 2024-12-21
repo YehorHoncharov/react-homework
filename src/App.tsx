@@ -1,5 +1,5 @@
 // import "./App.css"
-import { PostList } from "./pages/PostListPage/PostList";
+import { PostList } from "./shared/PostList/PostList";
 // import { Header }   from './Header/Header'
 import { Layout } from "./shared/Layout/Layout";
 // import { Footer } from './Footer/Footer'

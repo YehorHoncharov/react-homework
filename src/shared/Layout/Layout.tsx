@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import "./Layout.css";
 import { Header } from "../Header/Header";
-import { Main } from "../../pages/MainPage/Main";
+import { Main } from "../Main/Main";
 import { Outlet } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 // import { PostList } from "../PostList/PostList"
