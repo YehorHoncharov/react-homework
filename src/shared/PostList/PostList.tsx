@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { Post } from "./PostCard/Post";
-// import { App } from "./App";
 import "./PostList.css";
 import { usePost } from "../../hooks/usePosts";
-// import { useTitle } from "../../hooks/useTitle";
+
 
 
 export function PostList() {
