@@ -53,6 +53,8 @@ export function Post(props: IPostProps, { post }: PostCardProps) {
     }
   }
 
+
+
   return (
     <Link className="main-div" to={`/post/${props.id}`}>
       <div className="post">
