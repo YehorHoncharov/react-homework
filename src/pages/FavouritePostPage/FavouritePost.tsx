@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { postContext } from "../../App";
+import { postContext } from "../../context/cartContext";
 
 export function FavouritePosts(){
     const {favouritePosts, deletePost} = useContext(postContext)

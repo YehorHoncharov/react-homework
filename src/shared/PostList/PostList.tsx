@@ -46,14 +46,12 @@ export function PostList() {
         <div className="posts">
           {filteredPosts.map((post) => (
             <Post
-              id={post.id}
-              key={post.id}
-              title={post.title}
-              description={post.description}
-              img={post.image}
-              author={post.author}
-              like={post.like}
-              dislike={post.dislike}
+            key={post.id}
+            id={post.id}
+            title={post.title}
+            description={post.description}
+            image={post.image}
+            author={post.author}      
             />
           ))}
         </div>

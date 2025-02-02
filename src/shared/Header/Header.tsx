@@ -14,6 +14,10 @@ export function Header() {
             
             <input className='input' type="text" placeholder='Пошук продуктів...' />
             
+            <Link to={"/favourite"}>
+            <a className='allposts' href="/">FAVOURITE</a>
+            </Link>
+
             <img className='profileImgHeader' src="/static/img/profile.png" alt="" />
         </div>
     )
