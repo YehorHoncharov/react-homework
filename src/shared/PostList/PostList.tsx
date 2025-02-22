@@ -48,10 +48,11 @@ export function PostList() {
             <Post
             key={post.id}
             id={post.id}
-            title={post.title}
+            name={post.name}
             description={post.description}
-            image={post.image}
-            author={post.author}      
+            src={post.src}
+            author={post.author}
+            date={post.date}      
             />
           ))}
         </div>

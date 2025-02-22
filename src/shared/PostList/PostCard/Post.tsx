@@ -33,16 +33,16 @@ export function Post(props: IPost) {
     <div className='post'>
                 <Link to={`/post/${props.id}`}>
                     <div className="img">
-                        <img src={props.image} alt="" />
+                        <img src={props.src} alt="" />
                     </div>
                     <div className="headlines">
-                        <h2>{props.title.slice(0, 25)}...</h2>
+                        <h2>{props.name.slice(0, 25)}...</h2>
                         <p>{props.author}</p>
                     </div>
                 </Link>
                 <div className="desc">
                     <p>{props.description.slice(0, 100)}...</p>
-                    <FavButton id={props.id} title={props.title} description={props.description} image={props.image} author={props.author}></FavButton>
+                    <FavButton id={props.id} name={props.name} description={props.description} src={props.src} author={props.author} date={props.date}></FavButton>
                 </div>
             </div>
   );

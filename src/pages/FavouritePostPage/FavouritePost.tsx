@@ -6,9 +6,9 @@ export function FavouritePosts(){
     return (<div>
         {favouritePosts.map(post =>{
             return <div>
-                <h1>{post.title}</h1>
+                <h1>{post.name}</h1>
                 <p>{post.description}</p>
-                <img src={post.image} alt="" />
+                <img src={post.src} alt="" />
                 <button onClick={()=>{deletePost(post.id)}}>Delete</button>
             </div>
         })}

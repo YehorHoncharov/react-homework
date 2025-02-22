@@ -12,7 +12,7 @@ export interface IPostWithComment {
 
 
 
-export function usePost(){
+export function usePostWithComments(id: number){
     const [posts, setPosts] = useState<IPostWithComment[]>([])
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [error, setError] = useState<string>()

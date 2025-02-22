@@ -3,6 +3,7 @@ import { Layout } from "../shared/Layout/Layout";
 import { PostList } from "../shared/PostList/PostList";
 import { PostPage } from "../pages/PostPage/PostPage";
 import { FavouritePosts } from "../pages/FavouritePostPage/FavouritePost";
+import { Authorization } from "../pages/AuthorizationPage/Authorization";
 
 
 export function AppRoutes() {
@@ -13,6 +14,7 @@ export function AppRoutes() {
             <Route path="/posts" element={<PostList></PostList>}></Route>
             <Route path="/post/:id" element={<PostPage></PostPage>}></Route>
             <Route path="/favourite" element={<FavouritePosts></FavouritePosts>}></Route>
+            <Route path="/auth" element={<Authorization></Authorization>}></Route>
           </Route>
         </Routes>
         </BrowserRouter>

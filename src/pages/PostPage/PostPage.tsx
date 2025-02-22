@@ -13,7 +13,7 @@ export function PostPage() {
 
     useEffect(() => {
         if (post) {
-            setTitle(post.title || "Пост не найден");
+            setTitle(post.name || "Пост не найден");
         }
     }, [post, setTitle]);
 
@@ -41,20 +41,10 @@ export function PostPage() {
                 post && (
                     <div className="post-details">
                         <h1>ID Поста: {params.id}</h1>
-                        <h1>Заголовок: {post.title}</h1>
+                        <h1>Заголовок: {post.name}</h1>
                         <img
                             className="post-image"
-                            src={post.cover_image}
-                            alt={post.title || "Изображение поста"}
-                        />
-                        <p>
-                            <strong>Теги:</strong>{" "}
-                            {post.tags?.length ? post.tags.join(", ") : "Нет тегов"}
-                        </p>
-                        <article
-                            dangerouslySetInnerHTML={{
-                                __html: post.body_markdown || "Описание отсутствует.",
-                            }}
+                            alt={post.name || "Изображение поста"}
                         />
                     </div>
                 )
