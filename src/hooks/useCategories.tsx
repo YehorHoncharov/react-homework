@@ -4,7 +4,7 @@ export interface ICategory {
     id: number
     name: string
 }
-
+// useCategories
 export function usePost(){
     const [categories, setCategories] = useState<ICategory[]>([])
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -30,6 +30,7 @@ export function usePost(){
             }
             
         }
+        // продукты ?
         getProducts()
         
     },[])

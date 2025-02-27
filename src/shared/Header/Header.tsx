@@ -9,9 +9,10 @@ export function Header() {
             </Link>
             
             <Link to={"/posts"}>
+            {/* menu-button / menu-link */}
                 <a className='allposts' href="/">ALL POSTS</a>
             </Link>
-            
+            {/* продукты */}
             <input className='input' type="text" placeholder='Пошук продуктів...' />
             
             <Link to={"/favourite"}>

@@ -6,6 +6,7 @@ import { usePost } from "../../hooks/usePosts";
 
 
 export function PostList() {
+    // loading и error
   const { posts } = usePost();
   // const { title } = useTitle();
 
@@ -22,6 +23,7 @@ export function PostList() {
         })
       );
     }
+    // нужно убрать
     console.log(selectedCategory);
   }, [selectedCategory, posts]);
 
@@ -35,6 +37,7 @@ export function PostList() {
               setSelectedCategory(event.target.value);
             }}
           >
+            {/* map categories */}
             <option value="All">All</option>
             <option value="cats">Cats</option>
             <option value="bobik">Chat-Bot</option>
@@ -52,7 +55,7 @@ export function PostList() {
             description={post.description}
             src={post.src}
             author={post.author}
-            date={post.date}      
+            date={post.date}
             />
           ))}
         </div>

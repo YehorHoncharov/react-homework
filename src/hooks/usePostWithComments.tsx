@@ -1,14 +1,31 @@
-import { useEffect, useState } from "react";
+// Сам хук не имеет смысла
 
-export interface IPostWithComment {
-    id: number;
-    name: string;
-    description: string;
-    src: string;
-    author: string;
-    date: string,
-    comment: string;
+import { useEffect, useState } from "react";
+import { IPost } from "./usePosts";
+
+// export interface IPostWithComment {
+//     id: number;
+//     name: string;
+//     description: string;
+//     src: string;
+//     author: string;
+//     date: string,
+//     comment: string;
+// }
+interface IComment {
+
 }
+
+type IPostWithComment = IPost & IComment[]
+// {
+//     id: number;
+//     name: string;
+//     description: string;
+//     src: string;
+//     author: string;
+//     date: string,
+//     comments: [IComment]
+// }
 
 
 
@@ -17,6 +34,7 @@ export function usePostWithComments(id: number){
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [error, setError] = useState<string>()
     useEffect(()=>{
+        // продукты
         async function getProducts(){
             try{
                 setIsLoading(true)

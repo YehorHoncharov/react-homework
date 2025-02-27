@@ -14,9 +14,11 @@ import { FavButton } from "../../FavouriteButton/FavouriteButton";
 // }
 
 export function Post(props: IPost) {
+    // не используется
   let [like, setLike] = useState(0);
   const {favouritePosts, addFavPost, deletePost, isPostLiked} = useContext(postContext);
 
+//   не используется
     function handleLike(){
         if (isPostLiked(props.id)){
             setLike(like+1);
@@ -31,6 +33,7 @@ export function Post(props: IPost) {
 
   return (
     <div className='post'>
+        {/* табуляции */}
                 <Link to={`/post/${props.id}`}>
                     <div className="img">
                         <img src={props.src} alt="" />

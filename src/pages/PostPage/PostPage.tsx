@@ -16,13 +16,16 @@ export function PostPage() {
             setTitle(post.name || "Пост не найден");
         }
     }, [post, setTitle]);
-
+    // не надо
     console.log("post:", post);
     console.log("params.id:", params.id);
 
-
     if (!post && !isLoading) {
         return <div className="post-not-found">Пост не найден</div>;
+    }
+    // 
+    if (isLoading) {
+
     }
 
     return (
@@ -40,6 +43,7 @@ export function PostPage() {
             ) : (
                 post && (
                     <div className="post-details">
+                        {/* post.id */}
                         <h1>ID Поста: {params.id}</h1>
                         <h1>Заголовок: {post.name}</h1>
                         <img

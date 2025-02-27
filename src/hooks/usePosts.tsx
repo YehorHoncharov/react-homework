@@ -7,15 +7,17 @@ export interface IPost {
     src: string;
     author: string;
     date: string,
+    // ICategory тут вместо string
     category?: string;
 }
 
-
+// usePosts
 export function usePost(){
     const [posts, setPosts] = useState<IPost[]>([])
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [error, setError] = useState<string>()
     useEffect(()=>{
+        // продукты
         async function getProducts(){
             try{
                 setIsLoading(true)

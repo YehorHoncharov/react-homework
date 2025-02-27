@@ -4,6 +4,7 @@ import "./Authorization.css"
 export interface IForm{
     username: string;
     email: string;
+    // тока строка
     password: string | number;
 }
 

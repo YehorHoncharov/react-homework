@@ -15,10 +15,11 @@ const initialValue: IPostContext = {
   isPostLiked: (id: number) => false,
 };
 
+// Лучше не делать children обязательным пропсом
 interface IFavPostContextProviderProps{
-    children: ReactNode
+    children?: ReactNode
 }
-
+// не нужно экспортировать
 export const postContext = createContext<IPostContext>(initialValue);
 
 export function useFavPostContext() {
@@ -43,6 +44,7 @@ export function FavContextProvider(props: IFavPostContextProviderProps) {
   }
 
   function isPostLiked(id: number) {
+    // можно заменить some 
     for (let post of favouritePosts){
       if (post.id === id){
           return true;
