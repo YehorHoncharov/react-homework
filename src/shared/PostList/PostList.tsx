@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { Post } from "./PostCard/Post";
 import "./PostList.css";
-import { usePost } from "../../hooks/usePosts";
-
+import { usePosts } from "../../hooks/usePosts";
+import { Vortex } from "react-loader-spinner";
 
 
 export function PostList() {
-  const { posts } = usePost();
+  const { posts, isLoading, error} = usePosts();
   // const { title } = useTitle();
-
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -17,13 +16,11 @@ export function PostList() {
       setFilteredPosts(posts);
     } else {
       setFilteredPosts(
-        posts.filter((post) => {
-          return post.category === selectedCategory;
-        })
+        posts.filter((post) => post.category?.name === selectedCategory)
       );
     }
-    console.log(selectedCategory);
   }, [selectedCategory, posts]);
+  
 
 
   return (
@@ -35,26 +32,41 @@ export function PostList() {
               setSelectedCategory(event.target.value);
             }}
           >
-            <option value="All">All</option>
-            <option value="cats">Cats</option>
-            <option value="bobik">Chat-Bot</option>
-            <option value="dogs">Dogs</option>
-            <option value="chebureki">Chebureki</option>
-          </select>
+            <option value = 'All'>All</option>
+            {posts.map(category => {
+                return <option value={category.name}>{category.name}</option>
+            })}
+            </select>
         </div>
 
         <div className="posts">
-          {filteredPosts.map((post) => (
-            <Post
-            key={post.id}
-            id={post.id}
-            name={post.name}
-            description={post.description}
-            src={post.src}
-            author={post.author}
-            date={post.date}      
-            />
-          ))}
+        {isLoading ? (
+            <div className="vortex">
+              <Vortex
+                visible={true}
+                height="200"
+                width="200"
+                ariaLabel="vortex-loading"
+                wrapperStyle={{}}
+                wrapperClass="vortex-wrapper"
+                colors={["red", "green", "blue", "yellow", "orange", "purple"]}
+              />
+            </div>
+          ) : error ? (
+            <div>{error}</div>
+          ) : (
+            filteredPosts.map((post) => (
+              <Post
+                key={post.id}
+                id={post.id}
+                name={post.name}
+                description={post.description}
+                src={post.src}
+                author={post.author}
+                date={post.date}
+              />
+            ))
+          )}
         </div>
       </div>
     </>

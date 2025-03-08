@@ -8,7 +8,7 @@ interface IMainProps {
 export function Main(props: IMainProps) {
     return (
         <div className="Main">
-        {props.children}
+            {props.children}
         </div>
     )
 }

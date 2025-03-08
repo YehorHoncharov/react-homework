@@ -1,22 +1,27 @@
 import { useEffect, useState } from 'react' 
 
 export interface IPost {
-    id: number;
-    name: string;
-    description: string;
-    src: string;
-    author: string;
-    date: string,
-    category?: string;
+    id: number
+    name: string
+    description: string
+    src: string
+    author: string
+    date: string
+    category?: ICategory
 }
 
+export interface ICategory{
+    category: string
+    name: string
+}
 
-export function usePost(){
+export function usePosts(){
     const [posts, setPosts] = useState<IPost[]>([])
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [error, setError] = useState<string>()
+    
     useEffect(()=>{
-        async function getProducts(){
+        async function getPosts(){
             try{
                 setIsLoading(true)
                 const response = await fetch('http://localhost:8000/api/post/all')
@@ -34,9 +39,8 @@ export function usePost(){
             finally{
                 setIsLoading(false)
             }
-            
         }
-        getProducts()
+        getPosts()
         
     },[])
     return {posts: posts, isLoading: isLoading, error: error}

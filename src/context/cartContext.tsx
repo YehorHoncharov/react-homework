@@ -15,11 +15,12 @@ const initialValue: IPostContext = {
   isPostLiked: (id: number) => false,
 };
 
+
 interface IFavPostContextProviderProps{
     children: ReactNode
 }
 
-export const postContext = createContext<IPostContext>(initialValue);
+const postContext = createContext<IPostContext>(initialValue);
 
 export function useFavPostContext() {
     return useContext(postContext)

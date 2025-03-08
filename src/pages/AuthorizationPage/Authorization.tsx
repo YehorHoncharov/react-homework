@@ -2,9 +2,9 @@ import { useForm } from "react-hook-form";
 import "./Authorization.css"
 
 export interface IForm{
-    username: string;
-    email: string;
-    password: string | number;
+    username: string
+    email: string
+    password: string
 }
 
 export function Authorization(){

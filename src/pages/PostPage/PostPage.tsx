@@ -17,10 +17,6 @@ export function PostPage() {
         }
     }, [post, setTitle]);
 
-    console.log("post:", post);
-    console.log("params.id:", params.id);
-
-
     if (!post && !isLoading) {
         return <div className="post-not-found">Пост не найден</div>;
     }

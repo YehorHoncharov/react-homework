@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "../shared/Layout/Layout";
-import { PostList } from "../shared/PostList/PostList";
 import { PostPage } from "../pages/PostPage/PostPage";
 import { FavouritePosts } from "../pages/FavouritePostPage/FavouritePost";
 import { Authorization } from "../pages/AuthorizationPage/Authorization";
+import { Registration } from "../pages/RegistarationPage/RegistarationPage";
+import { PostListPage } from "../pages/PostListPage/PostListPage";
 
 
 export function AppRoutes() {
@@ -11,10 +12,11 @@ export function AppRoutes() {
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout></Layout>}>
-            <Route path="/posts" element={<PostList></PostList>}></Route>
+            <Route path="/posts" element={<PostListPage></PostListPage>}></Route>
             <Route path="/post/:id" element={<PostPage></PostPage>}></Route>
             <Route path="/favourite" element={<FavouritePosts></FavouritePosts>}></Route>
             <Route path="/auth" element={<Authorization></Authorization>}></Route>
+            <Route path="/reg" element={<Registration></Registration>}></Route>
           </Route>
         </Routes>
         </BrowserRouter>

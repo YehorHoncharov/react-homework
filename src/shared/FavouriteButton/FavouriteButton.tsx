@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
-import { postContext } from "../../context/cartContext";
+import { useState } from "react";
+import { useFavPostContext } from "../../context/cartContext";
 import { IPost } from "../../hooks/usePosts";
 
 
 export function FavButton(props: IPost){
     let [likes, setLikes] = useState(0);
-    const {favouritePosts, addFavPost, deletePost, isPostLiked} = useContext(postContext);
+    const {favouritePosts, addFavPost, deletePost, isPostLiked} = useFavPostContext()
 
     function handleLike(){
         if (isPostLiked(props.id)){
