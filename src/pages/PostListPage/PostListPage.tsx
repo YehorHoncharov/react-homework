@@ -1,5 +1,7 @@
+import { PostList } from "../../shared/PostList/PostList";
+
 export function PostListPage(){
     return (
-        <PostListPage/>
+        <PostList/>
     )
 }

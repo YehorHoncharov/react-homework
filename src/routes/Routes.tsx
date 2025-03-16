@@ -5,6 +5,7 @@ import { FavouritePosts } from "../pages/FavouritePostPage/FavouritePost";
 import { Authorization } from "../pages/AuthorizationPage/Authorization";
 import { Registration } from "../pages/RegistarationPage/RegistarationPage";
 import { PostListPage } from "../pages/PostListPage/PostListPage";
+import ProfilePage from "../pages/UserProfilePage/UserProfilePage";
 
 
 export function AppRoutes() {
@@ -17,6 +18,7 @@ export function AppRoutes() {
             <Route path="/favourite" element={<FavouritePosts></FavouritePosts>}></Route>
             <Route path="/auth" element={<Authorization></Authorization>}></Route>
             <Route path="/reg" element={<Registration></Registration>}></Route>
+            <Route path="/profile" element={<ProfilePage></ProfilePage>}></Route>
           </Route>
         </Routes>
         </BrowserRouter>
